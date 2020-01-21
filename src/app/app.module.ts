@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GitrepoService } from './repo/gitrepo.service';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ GitrepoService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
