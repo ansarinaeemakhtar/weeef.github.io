@@ -9,37 +9,46 @@
     <p>{{resume.basics?.contact}}<br><a href="mailto:{{resume.basics?.email}}">{{resume.basics?.email}}</a><br>{{resume.basics?.currentPosition}}<br>{{resume.basics?.technologies}}</p>
   </div>
   <div class="col-12 col-sm-6 mb-5">
+    <h4>summary</h4>
     <p>{{resume.about?.summary}}</p>
   </div>
   <div class="col-12 col-sm-6 mb-5">
+    <h4>highlights</h4>
     <ul class="text-left"><li *ngFor="let highlight of resume.about?.highlights; let i = index;">{{highlight}}</li></ul>
   </div>
   <div class="col-6 col-sm-3 mb-5">
+    <h4>technologies</h4>
     <ul class="text-left"><li *ngFor="let technology of resume.skills?.technologies; let i = index;">{{technology}}</li></ul>
   </div>
   <div class="col-6 col-sm-3 mb-5">
+    <h4>backend</h4>
     <ul class="text-left"><li *ngFor="let backend of resume.skills?.backend; let i = index;">{{backend}}</li></ul>
   </div>
   <div class="col-6 col-sm-3 mb-5">
+    <h4>frameworks</h4>
     <ul class="text-left"><li *ngFor="let framework of resume.skills?.frameworks; let i = index;">{{framework}}</li></ul>
   </div>
   <div class="col-6 col-sm-3 mb-5">
+    <h4>designing</h4>
     <ul class="text-left"><li *ngFor="let designingtool of resume.skills?.designingTools; let i = index;">{{designingtool}}</li></ul>
   </div>
   
   <div class="col-12 col-sm-9 mb-5">
-    <ul class="text-left"><li *ngFor="let education of resume?.education; let i = index;">{{education.degree}}, {{education.marks}}, {{education.year}},<br>{{education.board}}</li></ul>
+    <h4>educational qualification</h4>
+    <ul class="text-left"><li *ngFor="let education of resume?.education; let i = index;"><h5>{{education.degree}}</h5> {{education.marks}}, {{education.year}}, {{education.board}}</li></ul>
   </div>
   <div class="col-12 col-sm-3 mb-5">
+    <h4>interests</h4>
     <ul class="text-left"><li *ngFor="let interest of resume?.interests; let i = index;">{{interest}}</li></ul>
   </div>
 
   <div class="col-12 mb-5">
-    <ul class="text-left"><li *ngFor="let experience of resume?.experience; let i = index;">{{experience.company}} <a href="{{experience.website}}">{{experience.website}}</a><span class="float-right">{{experience.startDate}} - {{experience.endDate}}</span><br>{{experience.summary}}</li></ul>
+    <h4>work experience</h4>
+    <ul class="text-left"><li *ngFor="let experience of resume?.experience; let i = index;"><h5>{{experience.company}}</h5> <a href="{{experience.website}}">{{experience.website}}</a><span class="float-right">{{experience.startDate}} - {{experience.endDate}}</span>{{experience.summary}}</li></ul>
   </div>
 
   <div class="col-12 mb-5">
-    <ul class="text-left"><li *ngFor="let project of resume?.projects; let i = index;"><strong>{{project.name}}</strong><br>{{project.desc}}</li></ul>
+    <ul class="text-left"><li *ngFor="let project of resume?.projects; let i = index;"><h5>{{project.name}}</h5>{{project.desc}}</li></ul>
   </div>
   
   <!--
